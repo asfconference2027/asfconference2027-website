@@ -64,6 +64,15 @@
   background-repeat: no-repeat;
 }
 
+.hero-small {
+  padding: clamp(6.5rem, 14vw, 7.5rem) 1.5rem 2.5rem;
+}
+
+.hero-small h1 {
+  font-size: clamp(2.4rem, 6vw, 3.75rem);
+  margin: 0;
+}
+
 .hero::before {
   content: '';
   position: absolute;
