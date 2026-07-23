@@ -17,7 +17,7 @@ function Layout() {
               <Link to="/agenda">Agenda</Link>
             </li>
             <li>
-              <a href="#activities">Activities</a>
+              <Link to="/activities">Activities</Link>
             </li>
             <li>
               <a href="#competitions">Competitions</a>
