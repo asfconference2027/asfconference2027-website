@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Text:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --page: #f8f4eb;
+  --surface: #fffaf2;
+  --hero-top: #f5ebcf;
+  --hero-bottom: #dfceb0;
+  --ink: #21170f;
+  --ink-soft: #5b4c3f;
+  --line: #d7c8b0;
+  --line-dark: #99836a;
+  --highlight: #7a4312;
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-nav: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+  --font-body: 'Google Sans Text', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  color: var(--ink-soft);
+  background:
+    radial-gradient(1200px 400px at -10% -10%, rgba(175, 131, 77, 0.16), transparent),
+    radial-gradient(800px 300px at 110% -15%, rgba(102, 66, 31, 0.12), transparent),
+    var(--page);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+}
