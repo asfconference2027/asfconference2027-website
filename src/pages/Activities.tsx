@@ -15,7 +15,7 @@ interface ActivityCard {
 const ACTIVITIES: ActivityCard[] = [
   { title: "Caving", image: cavingImage, href: "/activities/caving" },
   { title: "Rescue Training", image: rescueTrainingImage, href: "/activities/rescue" },
-  { title: "Sightseeing", image: sightseeingImage },
+  { title: "Sightseeing", image: sightseeingImage, href: "/activities/sightseeing" },
 ];
 
 function Activities() {

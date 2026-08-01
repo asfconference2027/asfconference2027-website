@@ -1,0 +1,82 @@
+.sightseeing-section {
+  padding: 3rem 0;
+}
+
+.sightseeing-intro {
+  margin: 0 0 2.5rem;
+  max-width: none;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.sightseeing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.sightseeing-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.sightseeing-row-reverse .sightseeing-text {
+  order: 2;
+}
+
+.sightseeing-row-reverse .sightseeing-photo {
+  order: 1;
+}
+
+.sightseeing-text h2 {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: var(--ink);
+}
+
+.sightseeing-text p {
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.sightseeing-text p:last-child {
+  margin-bottom: 0;
+}
+
+.sightseeing-photo {
+  margin: 0;
+}
+
+.sightseeing-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+  border: 1px solid var(--line);
+}
+
+.sightseeing-photo figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+@media (max-width: 800px) {
+  .sightseeing-row,
+  .sightseeing-row-reverse .sightseeing-text,
+  .sightseeing-row-reverse .sightseeing-photo {
+    order: initial;
+  }
+
+  .sightseeing-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}

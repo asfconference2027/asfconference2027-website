@@ -5,6 +5,7 @@ import Agenda from './pages/Agenda'
 import Activities from './pages/Activities'
 import Caving from './pages/Caving'
 import Rescue from './pages/Rescue'
+import Sightseeing from './pages/Sightseeing'
 import Competitions from './pages/Competitions'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="activities" element={<Activities />} />
         <Route path="activities/caving" element={<Caving />} />
         <Route path="activities/rescue" element={<Rescue />} />
+        <Route path="activities/sightseeing" element={<Sightseeing />} />
         <Route path="competitions" element={<Competitions />} />
       </Route>
     </Routes>
