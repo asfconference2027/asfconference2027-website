@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Agenda from './pages/Agenda'
 import Activities from './pages/Activities'
 import Caving from './pages/Caving'
+import Rescue from './pages/Rescue'
 import Competitions from './pages/Competitions'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="agenda" element={<Agenda />} />
         <Route path="activities" element={<Activities />} />
         <Route path="activities/caving" element={<Caving />} />
+        <Route path="activities/rescue" element={<Rescue />} />
         <Route path="competitions" element={<Competitions />} />
       </Route>
     </Routes>
