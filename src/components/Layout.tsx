@@ -20,7 +20,7 @@ function Layout() {
               <Link to="/activities">Activities</Link>
             </li>
             <li>
-              <a href="#competitions">Competitions</a>
+              <Link to="/competitions">Competitions</Link>
             </li>
           </ul>
         </nav>
