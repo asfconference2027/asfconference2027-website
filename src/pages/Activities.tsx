@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../App.css";
 import "./Activities.css";
 import heroImage from "../assets/hero-karst.jpg";
@@ -8,10 +9,11 @@ import sightseeingImage from "../assets/sightseeing.jpg";
 interface ActivityCard {
   title: string;
   image: string;
+  href?: string;
 }
 
 const ACTIVITIES: ActivityCard[] = [
-  { title: "Caving", image: cavingImage },
+  { title: "Caving", image: cavingImage, href: "/activities/caving" },
   { title: "Rescue Training", image: rescueTrainingImage },
   { title: "Sightseeing", image: sightseeingImage },
 ];
@@ -40,12 +42,19 @@ function Activities() {
           </p>
 
           <div className="activities-grid">
-            {ACTIVITIES.map((activity) => (
-              <figure className="activity-card" key={activity.title}>
-                <img src={activity.image} alt="" className="activity-image" />
-                <figcaption>{activity.title}</figcaption>
-              </figure>
-            ))}
+            {ACTIVITIES.map((activity) =>
+              activity.href ? (
+                <Link className="activity-card" to={activity.href} key={activity.title}>
+                  <img src={activity.image} alt="" className="activity-image" />
+                  <p className="activity-caption">{activity.title}</p>
+                </Link>
+              ) : (
+                <figure className="activity-card" key={activity.title}>
+                  <img src={activity.image} alt="" className="activity-image" />
+                  <figcaption>{activity.title}</figcaption>
+                </figure>
+              ),
+            )}
           </div>
         </section>
       </main>
