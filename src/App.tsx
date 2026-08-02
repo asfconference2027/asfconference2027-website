@@ -7,6 +7,7 @@ import Caving from './pages/Caving'
 import Rescue from './pages/Rescue'
 import Sightseeing from './pages/Sightseeing'
 import Competitions from './pages/Competitions'
+import Speleosports from './pages/Speleosports'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="activities/rescue" element={<Rescue />} />
         <Route path="activities/sightseeing" element={<Sightseeing />} />
         <Route path="competitions" element={<Competitions />} />
+        <Route path="competitions/speleosports" element={<Speleosports />} />
       </Route>
     </Routes>
   )

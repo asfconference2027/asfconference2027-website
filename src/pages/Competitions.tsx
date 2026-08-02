@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../App.css";
 import "./Competitions.css";
 import heroImage from "../assets/hero-karst.jpg";
@@ -7,10 +8,11 @@ import cartographyImage from "../assets/cartography.jpg";
 interface CompetitionCard {
   title: string;
   image: string;
+  href?: string;
 }
 
 const COMPETITIONS: CompetitionCard[] = [
-  { title: "Speleosports", image: speleosportsImage },
+  { title: "Speleosports", image: speleosportsImage, href: "/competitions/speleosports" },
   { title: "Photography Competition", image: heroImage },
   { title: "Cartography Competition", image: cartographyImage },
 ];
@@ -51,16 +53,31 @@ function Competitions() {
           </div>
 
           <div className="competitions-grid">
-            {COMPETITIONS.map((competition) => (
-              <figure className="competition-card" key={competition.title}>
-                <img
-                  src={competition.image}
-                  alt=""
-                  className="competition-image"
-                />
-                <figcaption>{competition.title}</figcaption>
-              </figure>
-            ))}
+            {COMPETITIONS.map((competition) =>
+              competition.href ? (
+                <Link
+                  className="competition-card"
+                  to={competition.href}
+                  key={competition.title}
+                >
+                  <img
+                    src={competition.image}
+                    alt=""
+                    className="competition-image"
+                  />
+                  <p className="competition-caption">{competition.title}</p>
+                </Link>
+              ) : (
+                <figure className="competition-card" key={competition.title}>
+                  <img
+                    src={competition.image}
+                    alt=""
+                    className="competition-image"
+                  />
+                  <figcaption>{competition.title}</figcaption>
+                </figure>
+              ),
+            )}
           </div>
         </section>
       </main>
