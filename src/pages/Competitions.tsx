@@ -13,7 +13,7 @@ interface CompetitionCard {
 
 const COMPETITIONS: CompetitionCard[] = [
   { title: "Speleosports", image: speleosportsImage, href: "/competitions/speleosports" },
-  { title: "Photography Competition", image: heroImage },
+  { title: "Photography Competition", image: heroImage, href: "/competitions/photo-competition" },
   { title: "Cartography Competition", image: cartographyImage, href: "/competitions/cartography-competition" },
 ];
 

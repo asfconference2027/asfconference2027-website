@@ -1,0 +1,55 @@
+.photography-section {
+  padding: 3rem 0;
+}
+
+.photography-copy {
+  margin: 0 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.photography-copy p {
+  margin: 0;
+}
+
+.photography-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.photography-group h2 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: var(--ink);
+}
+
+.photography-group p {
+  margin: 0 0 0.75rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.photography-group p:last-child {
+  margin-bottom: 0;
+}
+
+.photography-list {
+  margin: 0 0 0.75rem;
+  padding-left: 1.25rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.photography-list li {
+  margin-bottom: 0.4rem;
+}
+
+.photography-list li:last-child {
+  margin-bottom: 0;
+}
