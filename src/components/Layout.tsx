@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import '../App.css'
 
 function Layout() {
+  const [infoOpen, setInfoOpen] = useState(false)
+
   return (
     <div className="site-shell">
       <header className="site-header">
@@ -21,6 +24,30 @@ function Layout() {
             </li>
             <li>
               <Link to="/competitions">Competitions</Link>
+            </li>
+            <li
+              className={`nav-dropdown${infoOpen ? ' open' : ''}`}
+              onMouseEnter={() => setInfoOpen(true)}
+              onMouseLeave={() => setInfoOpen(false)}
+            >
+              <button
+                type="button"
+                aria-haspopup="true"
+                aria-expanded={infoOpen}
+                onClick={() => setInfoOpen((open) => !open)}
+              >
+                Info
+                <span className="nav-caret" aria-hidden="true">
+                  ▾
+                </span>
+              </button>
+              <ul className="nav-dropdown-menu">
+                <li>
+                  <Link to="/info/venue" onClick={() => setInfoOpen(false)}>
+                    Venue
+                  </Link>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>

@@ -10,6 +10,7 @@ import Competitions from './pages/Competitions'
 import Speleosports from './pages/Speleosports'
 import Cartography from './pages/Cartography'
 import Photography from './pages/Photography'
+import Venue from './pages/Venue'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="competitions/speleosports" element={<Speleosports />} />
         <Route path="competitions/cartography-competition" element={<Cartography />} />
         <Route path="competitions/photo-competition" element={<Photography />} />
+        <Route path="info/venue" element={<Venue />} />
       </Route>
     </Routes>
   )

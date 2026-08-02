@@ -50,6 +50,72 @@
   color: #fdf8ec;
 }
 
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown > button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: var(--font-nav);
+  color: rgba(253, 248, 236, 0.9);
+  font-size: 0.95rem;
+}
+
+.nav-dropdown > button:hover,
+.nav-dropdown > button:focus-visible {
+  color: #fdf8ec;
+}
+
+.nav-caret {
+  font-size: 0.7rem;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0.5rem 0 0;
+  padding: 0.5rem 0;
+  list-style: none;
+  min-width: 10rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+}
+
+.nav-dropdown.open .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--ink);
+  font-family: var(--font-nav);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a:focus-visible {
+  background: var(--page);
+}
+
 .hero {
   position: relative;
   overflow: hidden;
