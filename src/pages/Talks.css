@@ -1,0 +1,48 @@
+.talks-section {
+  padding: 3rem 0;
+}
+
+.talks-copy {
+  margin: 0 0 2.5rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.talks-copy p {
+  margin: 0;
+}
+
+.talks-group h2 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: var(--ink);
+}
+
+.talks-group p {
+  margin: 0 0 0.75rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.talks-list {
+  margin: 0 0 0.75rem;
+  padding-left: 1.25rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.talks-list li {
+  margin-bottom: 0.4rem;
+}
+
+.talks-list li:last-child {
+  margin-bottom: 0;
+}
+
+.talks-deadline {
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0;
+}

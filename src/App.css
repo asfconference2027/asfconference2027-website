@@ -73,6 +73,28 @@
   color: #fdf8ec;
 }
 
+.nav-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.nav-dropdown-trigger button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: rgba(253, 248, 236, 0.9);
+}
+
+.nav-dropdown-trigger button:hover,
+.nav-dropdown-trigger button:focus-visible {
+  color: #fdf8ec;
+}
+
 .nav-caret {
   font-size: 0.7rem;
 }

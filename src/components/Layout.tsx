@@ -4,6 +4,7 @@ import '../App.css'
 
 function Layout() {
   const [infoOpen, setInfoOpen] = useState(false)
+  const [activitiesOpen, setActivitiesOpen] = useState(false)
 
   return (
     <div className="site-shell">
@@ -19,8 +20,47 @@ function Layout() {
             <li>
               <Link to="/agenda">Agenda</Link>
             </li>
-            <li>
-              <Link to="/activities">Activities</Link>
+            <li
+              className={`nav-dropdown${activitiesOpen ? ' open' : ''}`}
+              onMouseEnter={() => setActivitiesOpen(true)}
+              onMouseLeave={() => setActivitiesOpen(false)}
+            >
+              <span className="nav-dropdown-trigger">
+                <Link to="/activities">Activities</Link>
+                <button
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded={activitiesOpen}
+                  aria-label="Show Activities pages"
+                  onClick={() => setActivitiesOpen((open) => !open)}
+                >
+                  <span className="nav-caret" aria-hidden="true">
+                    ▾
+                  </span>
+                </button>
+              </span>
+              <ul className="nav-dropdown-menu">
+                <li>
+                  <Link to="/activities/caving" onClick={() => setActivitiesOpen(false)}>
+                    Caving
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/activities/rescue" onClick={() => setActivitiesOpen(false)}>
+                    Rescue Training
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/activities/sightseeing" onClick={() => setActivitiesOpen(false)}>
+                    Sightseeing
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/activities/talks" onClick={() => setActivitiesOpen(false)}>
+                    Talks
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link to="/competitions">Competitions</Link>
