@@ -87,6 +87,11 @@ function Layout() {
                     Venue
                   </Link>
                 </li>
+                <li>
+                  <Link to="/info/sponsors" onClick={() => setInfoOpen(false)}>
+                    Sponsors
+                  </Link>
+                </li>
               </ul>
             </li>
           </ul>

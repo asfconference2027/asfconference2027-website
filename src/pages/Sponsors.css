@@ -1,0 +1,220 @@
+.sponsors-section {
+  padding: 3rem 0;
+}
+
+.sponsors-copy {
+  margin: 0 0 2.5rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.sponsors-copy p {
+  margin: 0;
+}
+
+.sponsors-tier {
+  margin-bottom: 3rem;
+}
+
+.sponsors-tier:last-child {
+  margin-bottom: 0;
+}
+
+.sponsors-tier-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.sponsors-tier-line {
+  flex: 1;
+  height: 1px;
+  background: #c8b8a0;
+}
+
+.sponsors-tier-badge {
+  font-family: var(--font-nav);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0.3rem 1.1rem;
+  border-radius: 999px;
+}
+
+.sponsors-tier-badge--platinum {
+  background: #e8e2d8;
+  color: #5a4a30;
+  border: 1px solid #c8b898;
+}
+
+.sponsors-tier-badge--gold {
+  background: #faeeda;
+  color: #633806;
+  border: 1px solid #ef9f27;
+}
+
+.sponsors-tier-badge--silver {
+  background: #f0eff0;
+  color: #444441;
+  border: 1px solid #b4b2a9;
+}
+
+.sponsors-tier-badge--bronze {
+  background: #faece7;
+  color: #712b13;
+  border: 1px solid #f0997b;
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.75rem;
+}
+
+.sponsor-card {
+  margin: 0;
+  flex: 0 1 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+
+.sponsor-card:hover,
+.sponsor-card:focus-visible {
+  border-color: var(--ink-soft);
+}
+
+.sponsor-card img {
+  max-width: 100%;
+  max-height: 5rem;
+  object-fit: contain;
+}
+
+.sponsor-name {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+  font-weight: 700;
+  text-align: center;
+}
+
+.sponsor-tagline {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .sponsor-card {
+    flex-basis: 100%;
+    max-width: 24rem;
+  }
+}
+
+.sponsors-cta {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2.5rem;
+  background: #2b2019;
+  border-radius: 1rem;
+}
+
+.sponsors-cta-text h2 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-nav);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #f5efe4;
+}
+
+.sponsors-cta-text p {
+  margin: 0 0 1.25rem;
+  color: #c9a876;
+  line-height: 1.6;
+  max-width: 32rem;
+}
+
+.sponsors-cta-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.sponsors-cta-badge {
+  font-family: var(--font-nav);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  background: transparent;
+}
+
+.sponsors-cta-badge--platinum {
+  color: #d8d2c6;
+  border: 1px solid #7a7266;
+}
+
+.sponsors-cta-badge--gold {
+  color: #e0aa4a;
+  border: 1px solid #e0aa4a;
+}
+
+.sponsors-cta-badge--silver {
+  color: #c7c5c0;
+  border: 1px solid #8a8883;
+}
+
+.sponsors-cta-badge--bronze {
+  color: #cf8563;
+  border: 1px solid #cf8563;
+}
+
+.sponsors-cta-button {
+  flex-shrink: 0;
+  padding: 0.9rem 1.75rem;
+  background: #c9a876;
+  color: #2b2019;
+  font-family: var(--font-nav);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+}
+
+.sponsors-cta-button:hover,
+.sponsors-cta-button:focus-visible {
+  background: #d9bb8e;
+}
+
+@media (max-width: 700px) {
+  .sponsors-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sponsors-cta-button {
+    align-self: stretch;
+    text-align: center;
+  }
+}

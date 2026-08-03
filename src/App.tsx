@@ -12,6 +12,7 @@ import Cartography from './pages/Cartography'
 import Photography from './pages/Photography'
 import Venue from './pages/Venue'
 import Talks from './pages/Talks'
+import Sponsors from './pages/Sponsors'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="competitions/cartography-competition" element={<Cartography />} />
         <Route path="competitions/photo-competition" element={<Photography />} />
         <Route path="info/venue" element={<Venue />} />
+        <Route path="info/sponsors" element={<Sponsors />} />
       </Route>
     </Routes>
   )
