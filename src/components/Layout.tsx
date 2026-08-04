@@ -94,6 +94,9 @@ function Layout() {
                 </li>
               </ul>
             </li>
+            <li>
+              <Link to="/tickets">Tickets</Link>
+            </li>
           </ul>
         </nav>
       </header>
