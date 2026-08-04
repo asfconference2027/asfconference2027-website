@@ -14,6 +14,7 @@ import Venue from './pages/Venue'
 import Talks from './pages/Talks'
 import Sponsors from './pages/Sponsors'
 import Tickets from './pages/Tickets'
+import GettingThere from './pages/GettingThere'
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="info/venue" element={<Venue />} />
         <Route path="info/sponsors" element={<Sponsors />} />
         <Route path="tickets" element={<Tickets />} />
+        <Route path="info/getting-there" element={<GettingThere />} />
       </Route>
     </Routes>
   )

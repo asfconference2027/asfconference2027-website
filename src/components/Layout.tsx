@@ -88,6 +88,11 @@ function Layout() {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/info/getting-there" onClick={() => setInfoOpen(false)}>
+                    Getting There
+                  </Link>
+                </li>
+                <li>
                   <Link to="/info/sponsors" onClick={() => setInfoOpen(false)}>
                     Sponsors
                   </Link>

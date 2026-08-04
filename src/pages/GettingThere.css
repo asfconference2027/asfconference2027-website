@@ -1,0 +1,12 @@
+.getting-there-section {
+  padding: 3rem 0;
+}
+
+.getting-there-copy {
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.getting-there-copy p {
+  margin: 0;
+}
