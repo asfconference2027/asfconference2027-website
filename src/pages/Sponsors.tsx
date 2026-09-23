@@ -4,12 +4,14 @@ import heroImage from "../assets/hero-karst.jpg";
 import climbingAnchorsLogo from "../assets/climbing-anchors-logo.png";
 import scurionLogo from "../assets/scurion-logo.jpg";
 import speleanLogo from "../assets/spelean-logo.png";
+import aspiringLogo from "../assets/aspiring_logo.png";
 
 interface Sponsor {
   name: string;
   logo: string;
   tagline: string;
   url: string;
+  logoSize?: "large";
 }
 
 interface Tier {
@@ -40,11 +42,18 @@ const TIERS: Tier[] = [
     name: "Gold",
     sponsors: [
       {
-        name: "Petzl (via Spelean)",
+        name: "Petzl",
         logo: speleanLogo,
         tagline:
-          "Distributer for some of the world's leading outdoor brands in Australia",
-        url: "https://www.spelean.com.au/",
+          "Products and solutions that allow sports enthusiasts and professionals access the most inaccessible places",
+        url: "https://www.petzl.com/INT/en",
+      },
+      {
+        name: "Aspiring Safety",
+        logo: aspiringLogo,
+        tagline: "Quality gear for your vertical adventure",
+        url: "https://www.aspiring.co.nz/",
+        logoSize: "large",
       },
     ],
   },
@@ -90,7 +99,13 @@ function Sponsors() {
                     rel="noreferrer"
                     key={sponsor.name}
                   >
-                    <img src={sponsor.logo} alt={sponsor.name} />
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      className={
+                        sponsor.logoSize === "large" ? "sponsor-logo--large" : undefined
+                      }
+                    />
                     <p className="sponsor-name">{sponsor.name}</p>
                     <p className="sponsor-tagline">{sponsor.tagline}</p>
                   </a>
