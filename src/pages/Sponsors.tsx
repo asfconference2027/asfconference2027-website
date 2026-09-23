@@ -11,7 +11,6 @@ interface Sponsor {
   logo: string;
   tagline: string;
   url: string;
-  logoSize?: "large";
 }
 
 interface Tier {
@@ -53,7 +52,6 @@ const TIERS: Tier[] = [
         logo: aspiringLogo,
         tagline: "Quality gear for your vertical adventure",
         url: "https://www.aspiring.co.nz/",
-        logoSize: "large",
       },
     ],
   },
@@ -99,14 +97,7 @@ function Sponsors() {
                     rel="noreferrer"
                     key={sponsor.name}
                   >
-                    <img
-                      src={sponsor.logo}
-                      alt={sponsor.name}
-                      className={
-                        sponsor.logoSize === "large" ? "sponsor-logo--large" : undefined
-                      }
-                    />
-                    <p className="sponsor-name">{sponsor.name}</p>
+                    <img src={sponsor.logo} alt={sponsor.name} />
                     <p className="sponsor-tagline">{sponsor.tagline}</p>
                   </a>
                 ))}
