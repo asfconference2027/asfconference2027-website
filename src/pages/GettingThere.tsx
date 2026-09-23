@@ -17,19 +17,19 @@ function GettingThere() {
         <section className="getting-there-section">
           <div className="getting-there-copy">
             <p>
-              Getting to Chillagoe for the conference is an adventure in itself!
-              Make the journey to Far North Queensland part of the experience -
-              drive up from the south and take in the stunning sights of
-              Australia's east coast, or travel from the west and immerse
-              yourself in the vast beauty of the outback. If you're flying in,
-              Cairns offers a well-connected domestic and international airport,
-              or you can opt for the scenic Spirit of Queensland train. From
-              Cairns, just 210 km east of Chillagoe, you can hire a car for a
-              road trip through the savannah, or take advantage of shuttle
-              services provided by local accommodations like the Chillagoe Hotel
-              Motel and Chillagoe Eco Lodge & Observatory. However you choose to
-              get here, an unforgettable week of caving, camaraderie, and
-              exploration awaits!
+              Getting to Chillagoe is easier than you might think. Cairns has a
+              well-connected domestic and international airport, and from there
+              it's just a three-hour drive to Chillagoe. Hire a car and enjoy
+              the scenic road trip through the savannah, or take advantage of
+              shuttle services provided by local accommodations like the
+              Chillagoe Hotel Motel and Chillagoe Eco Lodge & Observatory.
+            </p>
+            <p>
+              And if you're driving up from the south or across from the west,
+              make the journey part of the experience, taking in the stunning
+              sights of Australia's east coast or the vast beauty of the outback
+              along the way. However you choose to get here, an unforgettable
+              week of caving, camaraderie, and exploration awaits!
             </p>
           </div>
         </section>
