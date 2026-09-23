@@ -13,7 +13,7 @@ const FACILITIES = [
     title: "General Store",
     image: generalStoreImage,
     description:
-      "The Chillagoe General Store is your one-stop shop for just about everything! From groceries to kids toys, this classic country store has you covered. Run by two super friendly owners (and their two adorable dogs!), it also boasts a fully stocked ice cream fridge—perfect for cooling off after a day of caving.",
+      "The Chillagoe General Store is your one-stop shop for just about everything! From groceries to kids' toys, this classic country store has you covered. It also boasts a fully stocked ice cream fridge, perfect for cooling off after a day of caving.",
   },
   {
     title: "Hardware Store",
@@ -62,31 +62,29 @@ function Venue() {
         <section className="venue-section">
           <div className="venue-copy">
             <p>
-              Chillagoe is the perfect base for a week of caving, adventure,
-              and connection. With its rich history, stunning limestone
-              formations, and easy access to countless caves, this charming
-              outback town offers an unbeatable location for the 34th ASF
-              Conference in 2027.
+              Chillagoe is the perfect base for a week of caving, adventure, and
+              connection. With its rich history, stunning limestone formations,
+              and easy access to countless caves, this charming outback town
+              offers an unbeatable location for the 34th ASF Conference in 2027.
             </p>
             <p>
               The Chillagoe Town Hall will be our main venue, right in the
               centre of town. With space for up to 300 people, an undercover
-              outdoor area, and a large lawn for gathering, it provides a
-              great setting for presentations, workshops, and social events.
+              outdoor area, and a large lawn for gathering, it provides a great
+              setting for presentations, workshops, and social events.
             </p>
             <p>
               Despite its small population of just 214 people (2021 census),
               Chillagoe has all the essentials within walking distance - two
               pubs, a restaurant, a café, a general store, a fuel station, a
-              hardware store, a laundromat, a library, and a post office.
-              After a day of talks or underground, you can cool off in one
-              of the beautiful local swimming spots or unwind with a drink
-              at the pub.
+              hardware store, a laundromat, a library, and a post office. After
+              a day of talks or underground, you can cool off in one of the
+              beautiful local swimming spots or unwind with a drink at the pub.
             </p>
             <p>
               Chillagoe's historic charm, welcoming community, and prime
-              location make it an ideal place for cavers to gather, explore,
-              and make the most of this unique conference experience.
+              location make it an ideal place for cavers to gather, explore, and
+              make the most of this unique conference experience.
             </p>
           </div>
 
@@ -106,25 +104,23 @@ function Venue() {
               <h2>Chillagoe Town Hall</h2>
               <p>
                 The Chillagoe Town Hall will be the main venue for the
-                conference, offering a spacious and well-equipped setting
-                right in the centre of town.
+                conference, offering a spacious and well-equipped setting right
+                in the centre of town.
               </p>
               <p>
                 With a capacity of 250&ndash;300 people, it's the perfect
-                gathering place for presentations, workshops, and social
-                events.
+                gathering place for presentations, workshops, and social events.
               </p>
               <p>
-                The hall features a kitchenette, a cold room, tables and
-                chairs, along with public toilets and full disability
-                access. Outside, there's a large undercover area with a
-                barbecue and a huge lawn, providing plenty of space to relax
-                and catch up with fellow cavers.
+                The hall features a kitchenette, a cold room, tables and chairs,
+                along with public toilets and full disability access. Outside,
+                there's a large undercover area with a barbecue and a huge lawn,
+                providing plenty of space to relax and catch up with fellow
+                cavers.
               </p>
               <p>
-                Adding to its charm, the hall is adorned with a stunning
-                mural by artist Lavinia, making it a true landmark of the
-                town.
+                Adding to its charm, the hall is adorned with a stunning mural
+                by artist Lavinia, making it a true landmark of the town.
               </p>
             </div>
           </div>
