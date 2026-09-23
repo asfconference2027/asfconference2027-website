@@ -61,6 +61,11 @@ function Layout() {
                     Talks
                   </Link>
                 </li>
+                <li>
+                  <Link to="/activities/movie-night" onClick={() => setActivitiesOpen(false)}>
+                    Movie Night
+                  </Link>
+                </li>
               </ul>
             </li>
             <li

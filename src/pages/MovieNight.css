@@ -1,0 +1,143 @@
+.movie-section {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.movie-copy {
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.movie-copy p {
+  margin: 0;
+}
+
+.movie-trailer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #14100c;
+}
+
+.movie-trailer iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.movie-title-banner {
+  padding: 3rem 1.5rem 2.5rem;
+  border-radius: 1rem;
+  background: #14100c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-title-image {
+  display: block;
+  width: min(100%, 30rem);
+}
+
+.movie-tagline {
+  margin: 1.25rem 0 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #c9a876;
+}
+
+.movie-quotes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.movie-quotes blockquote {
+  margin: 0;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.movie-quotes cite {
+  display: block;
+  margin-top: 0.75rem;
+  font-family: var(--font-nav);
+  font-style: normal;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.movie-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.movie-detail {
+  padding: 1.25rem 1rem;
+  text-align: center;
+  border-radius: 0.75rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.movie-detail-label {
+  margin: 0 0 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--highlight);
+}
+
+.movie-detail-value {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.movie-link {
+  align-self: center;
+  padding: 0.9rem 1.75rem;
+  background: var(--ink);
+  color: #fdf8ec;
+  font-family: var(--font-nav);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.movie-link:hover,
+.movie-link:focus-visible {
+  background: var(--highlight);
+}
+
+@media (max-width: 700px) {
+  .movie-quotes {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

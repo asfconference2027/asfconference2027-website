@@ -5,17 +5,25 @@ import heroImage from "../assets/hero-karst.jpg";
 import cavingImage from "../assets/caving.jpg";
 import rescueTrainingImage from "../assets/rescue-training.jpg";
 import sightseeingImage from "../assets/sightseeing.jpg";
+import subterraneanTitle from "../assets/subterranean-title.png";
 
 interface ActivityCard {
   title: string;
   image: string;
   href?: string;
+  imageVariant?: "logo";
 }
 
 const ACTIVITIES: ActivityCard[] = [
   { title: "Caving", image: cavingImage, href: "/activities/caving" },
   { title: "Rescue Training", image: rescueTrainingImage, href: "/activities/rescue" },
   { title: "Sightseeing", image: sightseeingImage, href: "/activities/sightseeing" },
+  {
+    title: "Movie Night",
+    image: subterraneanTitle,
+    href: "/activities/movie-night",
+    imageVariant: "logo",
+  },
 ];
 
 function Activities() {
@@ -42,19 +50,23 @@ function Activities() {
           </p>
 
           <div className="activities-grid">
-            {ACTIVITIES.map((activity) =>
-              activity.href ? (
+            {ACTIVITIES.map((activity) => {
+              const imageClassName =
+                activity.imageVariant === "logo"
+                  ? "activity-image activity-image--logo"
+                  : "activity-image";
+              return activity.href ? (
                 <Link className="activity-card" to={activity.href} key={activity.title}>
-                  <img src={activity.image} alt="" className="activity-image" />
+                  <img src={activity.image} alt="" className={imageClassName} />
                   <p className="activity-caption">{activity.title}</p>
                 </Link>
               ) : (
                 <figure className="activity-card" key={activity.title}>
-                  <img src={activity.image} alt="" className="activity-image" />
+                  <img src={activity.image} alt="" className={imageClassName} />
                   <figcaption>{activity.title}</figcaption>
                 </figure>
-              ),
-            )}
+              );
+            })}
           </div>
         </section>
       </main>

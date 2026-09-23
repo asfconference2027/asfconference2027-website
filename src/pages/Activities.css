@@ -31,6 +31,12 @@
   border: 1px solid var(--line);
 }
 
+.activity-image--logo {
+  object-fit: contain;
+  padding: 1.5rem;
+  background: #14100c;
+}
+
 .activity-card figcaption,
 .activity-card .activity-caption {
   margin: 0;

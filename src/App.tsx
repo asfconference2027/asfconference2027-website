@@ -16,6 +16,7 @@ import Sponsors from './pages/Sponsors'
 import Tickets from './pages/Tickets'
 import GettingThere from './pages/GettingThere'
 import Accommodation from './pages/Accommodation'
+import MovieNight from './pages/MovieNight'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="activities/rescue" element={<Rescue />} />
         <Route path="activities/sightseeing" element={<Sightseeing />} />
         <Route path="activities/talks" element={<Talks />} />
+        <Route path="activities/movie-night" element={<MovieNight />} />
         <Route path="competitions" element={<Competitions />} />
         <Route path="competitions/speleosports" element={<Speleosports />} />
         <Route path="competitions/cartography-competition" element={<Cartography />} />
