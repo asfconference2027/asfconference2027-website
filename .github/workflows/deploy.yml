@@ -25,6 +25,14 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          # TEMPORARY: makes this Pages build resolve assets correctly under
+          # the /asfconference2027-website/ subpath for collaborator review.
+          # Remove this env block (or set it to '/') once the real
+          # asfconference2027.com.au domain is pointed at Pages — see
+          # MIGRATION.md. Local dev/builds are unaffected either way, since
+          # vite.config.ts defaults to '/' when this isn't set.
+          VITE_BASE_PATH: /asfconference2027-website/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
