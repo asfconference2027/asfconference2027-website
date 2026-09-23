@@ -5,6 +5,7 @@ import '../App.css'
 function Layout() {
   const [infoOpen, setInfoOpen] = useState(false)
   const [activitiesOpen, setActivitiesOpen] = useState(false)
+  const [competitionsOpen, setCompetitionsOpen] = useState(false)
 
   return (
     <div className="site-shell">
@@ -62,8 +63,51 @@ function Layout() {
                 </li>
               </ul>
             </li>
-            <li>
-              <Link to="/competitions">Competitions</Link>
+            <li
+              className={`nav-dropdown${competitionsOpen ? ' open' : ''}`}
+              onMouseEnter={() => setCompetitionsOpen(true)}
+              onMouseLeave={() => setCompetitionsOpen(false)}
+            >
+              <span className="nav-dropdown-trigger">
+                <Link to="/competitions">Competitions</Link>
+                <button
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded={competitionsOpen}
+                  aria-label="Show Competitions pages"
+                  onClick={() => setCompetitionsOpen((open) => !open)}
+                >
+                  <span className="nav-caret" aria-hidden="true">
+                    ▾
+                  </span>
+                </button>
+              </span>
+              <ul className="nav-dropdown-menu">
+                <li>
+                  <Link
+                    to="/competitions/speleosports"
+                    onClick={() => setCompetitionsOpen(false)}
+                  >
+                    Speleosports
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/competitions/photo-competition"
+                    onClick={() => setCompetitionsOpen(false)}
+                  >
+                    Photography Competition
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/competitions/cartography-competition"
+                    onClick={() => setCompetitionsOpen(false)}
+                  >
+                    Cartography Competition
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li
               className={`nav-dropdown${infoOpen ? ' open' : ''}`}
