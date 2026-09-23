@@ -125,8 +125,7 @@
   transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
 }
 
-.nav-dropdown.open .nav-dropdown-menu,
-.nav-dropdown:focus-within .nav-dropdown-menu {
+.nav-dropdown.open .nav-dropdown-menu {
   width: auto;
   min-width: 10rem;
   overflow: visible;

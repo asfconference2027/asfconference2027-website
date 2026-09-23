@@ -2,10 +2,13 @@ import { useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import '../App.css'
 
+type DropdownName = 'activities' | 'competitions' | 'info'
+
 function Layout() {
-  const [infoOpen, setInfoOpen] = useState(false)
-  const [activitiesOpen, setActivitiesOpen] = useState(false)
-  const [competitionsOpen, setCompetitionsOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<DropdownName | null>(null)
+  const activitiesOpen = openDropdown === 'activities'
+  const competitionsOpen = openDropdown === 'competitions'
+  const infoOpen = openDropdown === 'info'
 
   return (
     <div className="site-shell">
@@ -23,8 +26,8 @@ function Layout() {
             </li>
             <li
               className={`nav-dropdown${activitiesOpen ? ' open' : ''}`}
-              onMouseEnter={() => setActivitiesOpen(true)}
-              onMouseLeave={() => setActivitiesOpen(false)}
+              onMouseEnter={() => setOpenDropdown('activities')}
+              onMouseLeave={() => setOpenDropdown((open) => (open === 'activities' ? null : open))}
             >
               <span className="nav-dropdown-trigger">
                 <Link to="/activities">Activities</Link>
@@ -33,7 +36,7 @@ function Layout() {
                   aria-haspopup="true"
                   aria-expanded={activitiesOpen}
                   aria-label="Show Activities pages"
-                  onClick={() => setActivitiesOpen((open) => !open)}
+                  onClick={() => setOpenDropdown((open) => (open === 'activities' ? null : 'activities'))}
                 >
                   <span className="nav-caret" aria-hidden="true">
                     ▾
@@ -42,27 +45,27 @@ function Layout() {
               </span>
               <ul className="nav-dropdown-menu">
                 <li>
-                  <Link to="/activities/caving" onClick={() => setActivitiesOpen(false)}>
+                  <Link to="/activities/caving" onClick={() => setOpenDropdown(null)}>
                     Caving
                   </Link>
                 </li>
                 <li>
-                  <Link to="/activities/rescue" onClick={() => setActivitiesOpen(false)}>
+                  <Link to="/activities/rescue" onClick={() => setOpenDropdown(null)}>
                     Rescue Training
                   </Link>
                 </li>
                 <li>
-                  <Link to="/activities/sightseeing" onClick={() => setActivitiesOpen(false)}>
+                  <Link to="/activities/sightseeing" onClick={() => setOpenDropdown(null)}>
                     Sightseeing
                   </Link>
                 </li>
                 <li>
-                  <Link to="/activities/talks" onClick={() => setActivitiesOpen(false)}>
+                  <Link to="/activities/talks" onClick={() => setOpenDropdown(null)}>
                     Talks
                   </Link>
                 </li>
                 <li>
-                  <Link to="/activities/movie-night" onClick={() => setActivitiesOpen(false)}>
+                  <Link to="/activities/movie-night" onClick={() => setOpenDropdown(null)}>
                     Movie Night
                   </Link>
                 </li>
@@ -70,8 +73,8 @@ function Layout() {
             </li>
             <li
               className={`nav-dropdown${competitionsOpen ? ' open' : ''}`}
-              onMouseEnter={() => setCompetitionsOpen(true)}
-              onMouseLeave={() => setCompetitionsOpen(false)}
+              onMouseEnter={() => setOpenDropdown('competitions')}
+              onMouseLeave={() => setOpenDropdown((open) => (open === 'competitions' ? null : open))}
             >
               <span className="nav-dropdown-trigger">
                 <Link to="/competitions">Competitions</Link>
@@ -80,7 +83,7 @@ function Layout() {
                   aria-haspopup="true"
                   aria-expanded={competitionsOpen}
                   aria-label="Show Competitions pages"
-                  onClick={() => setCompetitionsOpen((open) => !open)}
+                  onClick={() => setOpenDropdown((open) => (open === 'competitions' ? null : 'competitions'))}
                 >
                   <span className="nav-caret" aria-hidden="true">
                     ▾
@@ -91,7 +94,7 @@ function Layout() {
                 <li>
                   <Link
                     to="/competitions/speleosports"
-                    onClick={() => setCompetitionsOpen(false)}
+                    onClick={() => setOpenDropdown(null)}
                   >
                     Speleosports
                   </Link>
@@ -99,7 +102,7 @@ function Layout() {
                 <li>
                   <Link
                     to="/competitions/photo-competition"
-                    onClick={() => setCompetitionsOpen(false)}
+                    onClick={() => setOpenDropdown(null)}
                   >
                     Photography Competition
                   </Link>
@@ -107,7 +110,7 @@ function Layout() {
                 <li>
                   <Link
                     to="/competitions/cartography-competition"
-                    onClick={() => setCompetitionsOpen(false)}
+                    onClick={() => setOpenDropdown(null)}
                   >
                     Cartography Competition
                   </Link>
@@ -116,14 +119,14 @@ function Layout() {
             </li>
             <li
               className={`nav-dropdown${infoOpen ? ' open' : ''}`}
-              onMouseEnter={() => setInfoOpen(true)}
-              onMouseLeave={() => setInfoOpen(false)}
+              onMouseEnter={() => setOpenDropdown('info')}
+              onMouseLeave={() => setOpenDropdown((open) => (open === 'info' ? null : open))}
             >
               <button
                 type="button"
                 aria-haspopup="true"
                 aria-expanded={infoOpen}
-                onClick={() => setInfoOpen((open) => !open)}
+                onClick={() => setOpenDropdown((open) => (open === 'info' ? null : 'info'))}
               >
                 Info
                 <span className="nav-caret" aria-hidden="true">
@@ -132,22 +135,22 @@ function Layout() {
               </button>
               <ul className="nav-dropdown-menu">
                 <li>
-                  <Link to="/info/venue" onClick={() => setInfoOpen(false)}>
+                  <Link to="/info/venue" onClick={() => setOpenDropdown(null)}>
                     Venue
                   </Link>
                 </li>
                 <li>
-                  <Link to="/info/getting-there" onClick={() => setInfoOpen(false)}>
+                  <Link to="/info/getting-there" onClick={() => setOpenDropdown(null)}>
                     Getting There
                   </Link>
                 </li>
                 <li>
-                  <Link to="/info/accommodation" onClick={() => setInfoOpen(false)}>
+                  <Link to="/info/accommodation" onClick={() => setOpenDropdown(null)}>
                     Accommodation
                   </Link>
                 </li>
                 <li>
-                  <Link to="/info/sponsors" onClick={() => setInfoOpen(false)}>
+                  <Link to="/info/sponsors" onClick={() => setOpenDropdown(null)}>
                     Sponsors
                   </Link>
                 </li>
