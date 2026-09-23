@@ -160,12 +160,19 @@ const PREPOST_TIME_SLOTS = [
 ];
 
 const PREPOST_DAYS = [
-  { name: "Friday", date: "18 June" },
-  { name: "Saturday", date: "19 June" },
-  { name: "Sunday", date: "20 June" },
-  { name: "Sunday", date: "27 June" },
-  { name: "Monday", date: "28 June" },
+  { name: "Friday", date: "18 June", type: "pre" as const },
+  { name: "Saturday", date: "19 June", type: "pre" as const },
+  { name: "Sunday", date: "20 June", type: "pre" as const },
+  { name: "Mon – Sat", date: "21 – 26 June", type: "conference" as const },
+  { name: "Sunday", date: "27 June", type: "post" as const },
+  { name: "Monday", date: "28 June", type: "post" as const },
 ];
+
+const PREPOST_LABELS = {
+  pre: "Pre-conference caving",
+  conference: "Conference week",
+  post: "Post-conference caving",
+};
 
 function Agenda() {
   return (
@@ -265,16 +272,18 @@ function Agenda() {
                   {time}
                 </div>
               ))}
-              {PREPOST_DAYS.map((_, i) => (
+              {PREPOST_DAYS.map((day, i) => (
                 <div
                   key={i}
-                  className="schedule-block schedule-block--caving"
+                  className={`schedule-block schedule-block--${
+                    day.type === "conference" ? "conference-week" : "caving"
+                  }`}
                   style={{
                     gridColumn: i + 2,
                     gridRow: `2 / span ${PREPOST_TIME_SLOTS.length}`,
                   }}
                 >
-                  Pre-conference caving
+                  {PREPOST_LABELS[day.type]}
                 </div>
               ))}
             </div>

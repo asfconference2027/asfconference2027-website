@@ -94,6 +94,11 @@
   background: #f6d9e0;
 }
 
+.schedule-block--conference-week {
+  background: #e5e2db;
+  color: var(--ink-soft);
+}
+
 .agenda-copy {
   margin-top: 2.5rem;
   display: flex;
