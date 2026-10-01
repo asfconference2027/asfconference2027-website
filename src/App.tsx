@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Agenda from './pages/Agenda'
@@ -23,6 +23,9 @@ function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Home />} />
+        {/* Redirect for the old Google Sites default page URL, since it's
+            been advertised externally */}
+        <Route path="home" element={<Navigate to="/" replace />} />
         <Route path="agenda" element={<Agenda />} />
         <Route path="activities" element={<Activities />} />
         <Route path="activities/caving" element={<Caving />} />
